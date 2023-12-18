@@ -1,0 +1,8 @@
+<!-- В файле myapp/templates/myapp/car_detail.html -->
+
+<h2>{{ car.year }} {{ car.make }} {{ car.model }}</h2>
+<p>Color: {{ car.color }}</p>
+<p>Price: {{ car.price }}</p>
+<a href="{% url 'car_edit' pk=car.pk %}">Edit</a>
+<a href="{% url 'car_delete' pk=car.pk %}">Delete</a>
+

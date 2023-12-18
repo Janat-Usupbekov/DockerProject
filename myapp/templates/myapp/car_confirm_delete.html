@@ -1,0 +1,8 @@
+<!-- В файле myapp/templates/myapp/car_confirm_delete.html -->
+
+<h2>Delete Car</h2>
+<form method="post">
+  {% csrf_token %}
+  <p>Are you sure you want to delete "{{ object }}"?</p>
+  <button type="submit">Yes, delete it</button>
+</form>

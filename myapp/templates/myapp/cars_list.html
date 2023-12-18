@@ -1,0 +1,13 @@
+<!-- В файле myapp/templates/myapp/car_list.html -->
+
+<h2>Car List</h2>
+<ul>
+  {% for car in cars %}
+    <li>
+      <a href="{% url 'car_detail' pk=car.pk %}">
+        {{ car.year }} {{ car.make }} {{ car.model }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+<a href="{% url 'car_create' %}">Add new car</a>

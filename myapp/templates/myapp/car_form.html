@@ -1,0 +1,9 @@
+<!-- В файле myapp/templates/myapp/car_form.html -->
+
+<h2>{% if form.instance.pk %}Edit Car{% else %}Add New Car{% endif %}</h2>
+<form method="post" action="{% if form.instance.pk %}{% url 'car_edit' pk=form.instance.pk %}{% else %}{% url 'car_create' %}{% endif %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Save</button>
+</form>
+
